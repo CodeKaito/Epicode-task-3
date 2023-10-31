@@ -23,18 +23,17 @@ body {
 }
 
 .homepage {
-    height: 90vh;
     display: flex;
-    text-align: center;
     align-items: center;
     justify-content: center;
-    margin-top: auto;
+    padding: 20px;
 }
 
 .card {
     width: max-content;
     height: 550px;
     position: relative;
+    margin: 20px;
 }
 
 .image {
@@ -53,8 +52,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    transform: translateY(-480px);
-    transition: transform 1s ease-in;
+
 }
 
 .save {
@@ -73,8 +71,7 @@ body {
     align-items: center;
     justify-content: center;
     background-color: rgba(255,255,255, 0.7);
-    transform: translateY(480px);
-    transition: transform 1s ease-in;
+
 }
 
 .link-container > span {
@@ -92,8 +89,7 @@ body {
     align-items: center;
     justify-content: center;
     background-color: rgba(255,255,255, 0.7);
-    transform: translateY(480px);
-    transition: transform 1s ease-in;
+
 }
 
 .button1-container {
@@ -107,8 +103,6 @@ body {
     align-items: center;
     justify-content: center;
     background-color: rgba(255,255,255, 0.7);
-    transform: translateY(480px);
-    transition: transform 1s ease-in;
 }
 
 .show-when-hover {
@@ -116,8 +110,30 @@ body {
     visibility: hidden;
 }
 
-.image:hover + .show-when-hover {
+.image:hover + .show-when-hover > .save-container {
     pointer-events:none;
     visibility: visible;
+    transform: translateY(-480px);
+    transition: transform 1s ease-in;
+}
+
+.image:hover + .show-when-hover > .link-container {
+    pointer-events:none;
+    visibility: visible;
+    transform: translateY(480px);
+    transition: transform 1s ease-in;
+}
+
+.image:hover + .show-when-hover > .button1-container {
+    pointer-events:none;
+    visibility: visible;
+    transform: translateY(480px);
+    transition: transform 1s ease-in;
+}
+
+.image:hover + .show-when-hover > .button2-container {
+    pointer-events:none;
+    visibility: visible;
+    transform: translateY(480px);
     transition: transform 1s ease-in;
 }
