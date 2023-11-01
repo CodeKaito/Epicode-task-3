@@ -61,6 +61,7 @@ body {
     background-color: #E1E1E1;
     border-radius: 30px;
     display: flex;
+    position: relative;
     align-items: center;
     justify-content: flex-start;
 }
@@ -120,14 +121,34 @@ body {
     cursor: pointer;
 }
 
-.cerca-container > i {
-    margin-left: 17px;
-    color:#5f5f5f;
+.input-cerca {
+    height: 30px;
+    width: 600px;
+    margin-left: 45px;
+    background-color: #E1E1E1;
+    border: none;
 }
 
-.cerca-container > p {
-    margin-left: 7px;
-    color: gray;
+textarea:focus, input:focus{
+    outline: none;
+}
+
+.cerca-container > i {
+    top: 35%;
+    left: 0;
+    margin-left: 17px;
+    color:#5f5f5f;
+    position: absolute;
+    visibility: visible;
+}
+
+.input-cerca:focus {
+    transform: translateX(-20px);
+    transition: transform 0.01s;
+}
+
+.input-cerca:focus + .glass{
+    visibility: hidden;
 }
 
 .bell-container > i {
