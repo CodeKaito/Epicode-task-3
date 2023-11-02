@@ -178,6 +178,7 @@ textarea:focus, input:focus{
     height: 400px;
     position: relative;
     margin: 20px;
+    overflow: hidden;
 }
 
 .image {
